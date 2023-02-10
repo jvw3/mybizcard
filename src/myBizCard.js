@@ -1,11 +1,9 @@
-import { ApplicationViews } from "./views/ApplicationViews"
-import { NavBar } from "./components/nav/NavBar"
+import { MyCard } from "./card/MyCard"
 
 
-export const myBizCard = () => (
+export const MyBizCard = () => (
     <>
-        <NavBar />
-        <ApplicationViews />
+        <MyCard />
     </>
 )
 
