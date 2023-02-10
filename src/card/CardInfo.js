@@ -27,7 +27,7 @@ export const CardInfo = ({ setAboutMeVisibility, setAboutAnimation }) => {
             </button>
           </div>
           <div className="text-center absolute bottom-14 w-full">
-            Connect with Me
+            Connect 
           </div>
           <div className="absolute bottom-3 w-full text-xs flex justify-evenly ">
             <a
