@@ -15,6 +15,8 @@ module.exports = {
         25: "25vh",
         75: "75vh",
         40: "40vh",
+        55: "55vh",
+        45: "45vh",
         80: "80vh",
       },
       width: {
@@ -30,6 +32,7 @@ module.exports = {
       },
       backgroundImage: {
         profilePic: "url(../src/images/profilepic.jpeg)",
+        headshotBackground: "url(../src/images/headshotbackground.jpeg)",
       },
       keyframes: {
         slideUp: {
