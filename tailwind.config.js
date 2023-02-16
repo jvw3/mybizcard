@@ -11,11 +11,16 @@ module.exports = {
       },
       height: {
         30: "30vh",
+        35: "35vh",
         20: "20vh",
         25: "25vh",
         75: "75vh",
+        70: "70vh",
         40: "40vh",
+        55: "55vh",
+        45: "45vh",
         80: "80vh",
+        60: "60vh",
       },
       width: {
         30: "30vw",
@@ -30,6 +35,7 @@ module.exports = {
       },
       backgroundImage: {
         profilePic: "url(../src/images/profilepic.jpeg)",
+        headshotBackground: "url(../src/images/headshotbackground.jpeg)",
       },
       keyframes: {
         slideUp: {
@@ -40,10 +46,22 @@ module.exports = {
           "0%": { transform: "translateY(-50%)" },
           "100%": { transform: "translateY(100%)" },
         },
+        aboutSlide: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(121%)" },
+        },
+        disappear: {
+          "0%": { opacity: "1" },
+          "90%": { opacity: "0"},
+          "100%": {background: "indigo-700",color: "white"},
+        }
+
       },
       animation: {
         slideUp: "slideUp 1s ease-in-out",
         slideDown: "slideDown 1s ease-in-out",
+        aboutSlide: "aboutSlide 1s ease-in-out",
+        disappear: "disappear 1s ease-in-out",
       },
     },
   },
