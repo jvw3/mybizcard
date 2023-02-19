@@ -12,11 +12,11 @@ export const MyCard = () => {
 
   return (
     <>
-      <main className=" w-screen h-screen bg-indigo-900 font-roboto">
+      <main className=" w-screen h-90 bg-indigo-900 font-roboto">
         <div className="flex-col">
-          <div className="relative flex items-start justify-center ">
+          <div className="relative flex items-start justify-center h-30">
             <div className=" w-full h-full flex-col ">
-              <div className="bg-headshotBackground bg-cover h-30 bg-[center_top_-6rem] ">
+              <div className="bg-headshotBackground bg-cover h-full bg-[center_top_-6rem] ">
                 <div className="bg-gradient-to-b from-transparent via-transparent to-indigo-900 w-full h-full bg-opacity-40">
                   <div className="absolute bottom-0 text-white ml-2 mb-2 ">
                     <h1 className="text-2xl">Jonathan Woodard</h1>
@@ -52,7 +52,7 @@ export const MyCard = () => {
               </motion.div>
             </div>
           </div>
-          <div className="text-center  bg-white rounded-tr-2xl rounded-tl-2xl h-70">
+          <div className="text-center  bg-white rounded-tr-2xl rounded-tl-2xl h-60">
             <BusinessCardInfo />
           </div>
         </div>
