@@ -19,7 +19,6 @@ export const BusinessCardInfo = () => {
   return (
     <>
       <main className="w-full">
-        <div className="">
           <div className="flex justify-evenly">
             <motion.div
               initial={{ scale: 0, rotation: -180 }}
@@ -30,15 +29,14 @@ export const BusinessCardInfo = () => {
                 damping: 10,
                 delay: 0.2,
               }}
+              onClick={openEmail}
               whileTap={{ scale: 0.8 }}
               className="mt-5 bg-indigo-700 text-white p-3 rounded-xl text-xl shadow-lg shadow-indigo-700"
             >
-              <button onClick={openEmail}>
-                <div className="flex space-x-2">
-                  <div>Email</div>
-                  <IconMail />
-                </div>
-              </button>
+              <div className="flex space-x-2">
+                <div>Email</div>
+                <IconMail />
+              </div>
             </motion.div>
             <motion.div
               initial={{ scale: 0, rotation: -180 }}
@@ -79,7 +77,6 @@ export const BusinessCardInfo = () => {
               </button>
             </motion.div>
           </div>
-        </div>
         <div className="w-full">
           <SwiperContainer />
         </div>
