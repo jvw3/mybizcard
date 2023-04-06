@@ -8,7 +8,7 @@ import {
   IconBrandGithub,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { SwiperContainer } from "./SwiperContainer";
+import { SwiperContainer } from "./ScrollingContainer";
 
 export const BusinessCardInfo = () => {
   const options = { threshold: 0.6 };
