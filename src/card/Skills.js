@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import mylogo from "../images/jwlogo.svg";
 
-export const Skills = ({xPosition}) => {
+export const Skills = () => {
 
   return (
     <>
@@ -9,54 +9,54 @@ export const Skills = ({xPosition}) => {
         <div className="space-y-5 flex-col mt-4">
           <div className="flex flex-wrap w-80 justify-center  space-x-1 ">
             <div className="flex-col">
-              <i class="devicon-html5-plain-wordmark text-white text-3xl"></i>
-              <div className="text-xs text-white">HTML</div>
+              <i class="devicon-html5-plain-wordmark text-indigo-700 text-5xl"></i>
+              <div className="text-xs text-indigo-700">HTML</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-css3-plain-wordmark text-white text-3xl"></i>
-              <div className="text-xs text-white">CSS</div>
+              <i class="devicon-css3-plain-wordmark text-indigo-700 text-5xl"></i>
+              <div className="text-xs text-indigo-700">CSS</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-javascript-plain text-white text-3xl"></i>
+              <i class="devicon-javascript-plain text-indigo-700 text-5xl"></i>
 
-              <div className="text-xs text-white">Javascript</div>
+              <div className="text-xs text-indigo-700">Javascript</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-react-original text-white text-3xl"></i>
+              <i class="devicon-react-original text-indigo-700 text-5xl"></i>
 
-              <div className="text-xs text-white">React</div>
+              <div className="text-xs text-indigo-700">React</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-tailwindcss-plain text-white text-3xl"></i>
+              <i class="devicon-tailwindcss-plain text-indigo-700 text-5xl"></i>
 
-              <div className="text-xs text-white">TailwindCss</div>
+              <div className="text-xs text-indigo-700">TailwindCss</div>
             </div>
           </div>
           <div className="flex flex-wrap justify-center w-full space-x-1">
             <div className="flex-col">
-              <i class="devicon-python-plain text-white text-3xl"></i>
+              <i class="devicon-python-plain text-indigo-700 text-5xl"></i>
 
-              <div className="text-xs text-white">Python</div>
+              <div className="text-xs text-indigo-700">Python</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-django-plain text-white text-3xl"></i>
+              <i class="devicon-django-plain text-indigo-700 text-5xl"></i>
 
-              <div className="text-xs text-white">Django</div>
+              <div className="text-xs text-indigo-700">Django</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-sqlite-plain text-white text-3xl"></i>
+              <i class="devicon-sqlite-plain text-indigo-700 text-5xl"></i>
 
-              <div className="text-xs text-white">SQLite</div>
+              <div className="text-xs text-indigo-700">SQLite</div>
             </div>
           </div>
           <div className="flex flex-wrap justify-center w-full space-x-1">
             <div className="flex-col">
-              <i class="devicon-git-plain text-white text-3xl"></i>
-              <div className="text-xs text-white">Git</div>
+              <i class="devicon-git-plain text-indigo-700 text-5xl"></i>
+              <div className="text-xs text-indigo-700">Git</div>
             </div>
             <div className="flex-col">
-              <i class="devicon-github-original text-white text-3xl"></i>
-              <div className="text-xs text-white">Github</div>
+              <i class="devicon-github-original text-indigo-700 text-5xl"></i>
+              <div className="text-xs text-indigo-700">Github</div>
             </div>
           </div>
         </div>
