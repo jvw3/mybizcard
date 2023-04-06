@@ -1,11 +1,11 @@
 
 
-export const AboutMe = ({setAboutMeVisibility, aboutMeVisible}) => {
+export const AboutMe = () => {
   return (
     <>
-      <main className=" bg-indigo-700 rounded-2xl ">
+      <main className=" ">
         <div className=" p-4">
-          <p className="text-white text-xs">
+          <p className="text-indigo-700 text-md">
             I'm a self-motivated, team oriented, algorithmic thinker with a
             passion for learning, and a strength for working in a high pressure,
             fast-paced, environment. I've recently made the transition to
