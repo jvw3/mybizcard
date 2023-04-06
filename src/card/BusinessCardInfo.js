@@ -8,7 +8,7 @@ import {
   IconBrandGithub,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { SwiperContainer } from "./SwiperContainer";
+import { SwiperContainer } from "./ScrollingContainer";
 
 export const BusinessCardInfo = () => {
   const options = { threshold: 0.6 };
@@ -26,17 +26,8 @@ export const BusinessCardInfo = () => {
     <>
       <main className="w-full">
         <div className="flex justify-evenly border-b-gray-300 border-2 rounded-tl-xl rounded-tr-xl">
-          <motion.div
-            initial={{ scale: 0, rotation: -180 }}
-            animate={{ rotate: 0, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 10,
-              delay: 0.2,
-            }}
+          <div
             onClick={openEmail}
-            whileTap={{ scale: 0.8 }}
             className="mt-5 text-white p-3 text-lg"
           >
               {aboutMeVisible ? (
@@ -58,8 +49,8 @@ export const BusinessCardInfo = () => {
               <div>About Me</div>
               <IconMail />
             </div>
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             initial={{ scale: 0, rotation: -180 }}
             animate={{ rotate: 0, scale: 1 }}
             transition={{
@@ -77,8 +68,8 @@ export const BusinessCardInfo = () => {
                 <IconBrandGithub />
               </div>
             </button>
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             initial={{ scale: 0, rotation: -180 }}
             animate={{ rotate: 0, scale: 1 }}
             transition={{
@@ -96,7 +87,7 @@ export const BusinessCardInfo = () => {
                 <IconExternalLink />
               </div>
             </button>
-          </motion.div>
+          </div>
         </div>
         <div className="w-full">
           <SwiperContainer

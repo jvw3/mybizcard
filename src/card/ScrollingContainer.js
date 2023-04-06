@@ -52,8 +52,8 @@ export const SwiperContainer = ({aboutRef, skillsRef, experienceRef, skillsVisib
   return (
     <>
       <main className="w-screen overflow-y-scroll   mt-6">
-        <motion.div ref={containerRef} className="flex h-[430px]">
-          <motion.div
+        <div ref={containerRef} className="flex h-[430px]">
+          <div
             className="snap-y snap-mandatory overflow-scroll"
             initial={{ scale: 0, rotation: -180 }}
             animate={{ rotate: 0, scale: 1 }}
@@ -63,14 +63,11 @@ export const SwiperContainer = ({aboutRef, skillsRef, experienceRef, skillsVisib
               damping: 10,
               delay: 0.2,
             }}
-            whileDrag="grabbing"
-            dragMomentum={true}
-            drag="y"
-            dragConstraints={containerRef}
+            
           >
             <div className="flex-col h-full w-full  ">
               <div className="flex-col justify-center snap-always snap-start ">
-                <motion.div
+                <div
                   initial={{ scale: 0, rotation: -180 }}
                   animate={{ rotate: 0, scale: 1 }}
                   transition={{
@@ -85,7 +82,7 @@ export const SwiperContainer = ({aboutRef, skillsRef, experienceRef, skillsVisib
                   <div>Github</div>
                   <div>Resume</div>
                   <div>Portfolio</div>
-                </motion.div>
+                </div>
                 <div
                   ref={aboutRef}
                   className="flex  shadow-indigo-700 justify-center w-full h-[340px] shadow-lg rounded-2xl mb-10"
@@ -108,25 +105,9 @@ export const SwiperContainer = ({aboutRef, skillsRef, experienceRef, skillsVisib
                 </div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
-        <div className="flex justify-center absolute bottom-2 right-40 space-x-3">
-          <div
-            className={`  w-4 h-4 rounded-full transition-all ease-in-out duration-300 ${
-              skillsVisible ? "bg-indigo-700" : "bg-slate-300"
-            }`}
-          ></div>
-          <div
-            className={`w-4 h-4 rounded-full transition-all ease-in-out duration-300 ${
-              aboutMeVisible ? "bg-indigo-700" : "bg-slate-300"
-            }`}
-          ></div>
-          <div
-            className={`w-4 h-4 rounded-full transition-all ease-in-out duration-300 ${
-              experienceVisible ? "bg-indigo-700" : "bg-slate-300"
-            }`}
-          ></div>
+          </div>
         </div>
+
       </main>
     </>
   );
