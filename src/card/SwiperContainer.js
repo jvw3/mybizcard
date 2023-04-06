@@ -11,11 +11,8 @@ import {
 } from "framer-motion";
 import { Experience } from "./Experience";
 
-export const SwiperContainer = () => {
-  const options = { threshold: 0.6 };
-  const { ref: skillsRef, inView: skillsVisible } = useInView(options);
-  const { ref: aboutRef, inView: aboutMeVisible } = useInView(options);
-  const { ref: experienceRef, inView: experienceVisible } = useInView(options);
+export const SwiperContainer = ({aboutRef, skillsRef, experienceRef, skillsVisible, aboutMeVisible, experienceVisible }) => {
+  
 
   //? The first line performs the same task as all of the commented code below. The code above is useInView hook from the react intersection observer library
   // const skillsRef = useRef();
@@ -54,86 +51,10 @@ export const SwiperContainer = () => {
 
   return (
     <>
-      <main className="w-screen overflow-hidden border">
-        <motion.div
-          initial={{ scale: 0, rotation: -180 }}
-          animate={{ rotate: 0, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 50,
-            damping: 10,
-            delay: 0.2,
-          }}
-          className="flex justify-center mt-8 ml-10 mr-14 rounded-lg bg-indigo-700 mb-5 p-2 "
-        >
-          <div className="flex space-x-4 shadow-lg shadow-indigo-700">
-            <motion.h2
-              initial={{ rotation: -180 }}
-              animate={{ rotate: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 50,
-                damping: 10,
-                delay: 0.2,
-              }}
-              className={`text-md pl-2 pr-2 ${
-                skillsVisible
-                  ? "text-indigo-700 bg-white rounded-md transition-all ease-in-out duration-300"
-                  : "text-white bg-indigo-700 transition-all ease-in-out duration-300"
-              }`}
-            >
-              Skills
-            </motion.h2>
-            <motion.div
-              initial={{ scale: 1, rotation: -180, color: "black" }}
-              animate={{ rotate: 0, scale: 1, color: "white" }}
-              transition={{
-                type: "spring",
-                stiffness: 50,
-                damping: 10,
-                delay: 0.2,
-              }}
-              // className={`text-md  ${
-              //   skillsVisible
-              //     ? "bg-white text-indigo-700 rounded-lg pl-5 pr-5"
-              //     : "animate-disappear bg-white rounded-lg pl-5 pr-5"
-              // }`}
-            >
-              <h2
-                className={`text-md pl-2 pr-2 ${
-                  aboutMeVisible
-                    ? "text-indigo-700 bg-white rounded-md transition-all ease-in-out duration-300"
-                    : "text-white bg-indigo-700 transition-all ease-in-out duration-300"
-                }`}
-              >
-                About Me
-              </h2>
-            </motion.div>
-            <motion.div
-              initial={{ scale: 1, rotation: -180, color: "black" }}
-              animate={{ rotate: 0, scale: 1, color: "white" }}
-              transition={{
-                type: "spring",
-                stiffness: 50,
-                damping: 10,
-                delay: 0.2,
-              }}
-            >
-              <h2
-                className={`text-md pl-2 pr-2 ${
-                  experienceVisible
-                    ? "text-indigo-700 bg-white rounded-md transition-all ease-in-out duration-300"
-                    : "text-white bg-indigo-700 transition-all ease-in-out duration-300"
-                }`}
-              >
-                Experience
-              </h2>
-            </motion.div>
-          </div>
-        </motion.div>
-        <motion.div ref={containerRef} className="flex h-40">
+      <main className="w-screen overflow-y-scroll   mt-6">
+        <motion.div ref={containerRef} className="flex h-[430px]">
           <motion.div
-            className="touch-pan-x"
+            className="snap-y snap-mandatory overflow-scroll"
             initial={{ scale: 0, rotation: -180 }}
             animate={{ rotate: 0, scale: 1 }}
             transition={{
@@ -144,28 +65,44 @@ export const SwiperContainer = () => {
             }}
             whileDrag="grabbing"
             dragMomentum={true}
-            drag="x"
+            drag="y"
             dragConstraints={containerRef}
           >
-            <div className="flex h-full ml-10 mr-10">
-              <div
-                ref={skillsRef}
-                className="flex justify-center w-75 h-3/4 bg-indigo-700 rounded-2xl shadow-lg shadow-indigo-700"
-              >
-                {<Skills />}
-              </div>
-              <div className="flex justify-center ml-10">
+            <div className="flex-col h-full w-full  ">
+              <div className="flex-col justify-center snap-always snap-start ">
+                <motion.div
+                  initial={{ scale: 0, rotation: -180 }}
+                  animate={{ rotate: 0, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 50,
+                    damping: 10,
+                    delay: 0.2,
+                  }}
+                  className="flex justify-center mt-8 ml-10 mr-14 rounded-lg bg-indigo-700 mb-5 p-2 space-x-3 text-white"
+                >
+                  <div>Email</div>
+                  <div>Github</div>
+                  <div>Resume</div>
+                  <div>Portfolio</div>
+                </motion.div>
                 <div
                   ref={aboutRef}
-                  className="flex  shadow-indigo-700 justify-center w-75 h-3/4 shadow-lg rounded-2xl"
+                  className="flex  shadow-indigo-700 justify-center w-full h-[340px] shadow-lg rounded-2xl mb-10"
                 >
                   {<AboutMe />}
                 </div>
               </div>
-              <div className="flex justify-center ml-10">
+              <div
+                ref={skillsRef}
+                className="flex justify-center w-full h-[400px]  rounded-2xl shadow-lg shadow-indigo-700 mb-10 snap-always snap-start"
+              >
+                {<Skills />}
+              </div>
+              <div className="flex justify-center snap-always snap-start ">
                 <div
                   ref={experienceRef}
-                  className="flex  shadow-indigo-700 justify-center w-75 h-3/4 shadow-lg rounded-2xl"
+                  className="flex  shadow-indigo-700 justify-center w-full h-3/4 shadow-lg rounded-2xl"
                 >
                   {<Experience />}
                 </div>
