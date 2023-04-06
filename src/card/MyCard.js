@@ -20,7 +20,7 @@ export const MyCard = () => {
                 <div className="bg-gradient-to-b from-transparent via-transparent to-indigo-900 w-full h-full bg-opacity-40">
                   <div className="absolute bottom-0 text-white ml-2 mb-2 ">
                     <h1 className="text-2xl">Jonathan Woodard</h1>
-                    <h2 className="text-xl">Software Developer</h2>
+                    <h2 className="text-xl">Software Engineer</h2>
                   </div>
                 </div>
               </div>
