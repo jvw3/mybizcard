@@ -3,7 +3,7 @@
 export const AboutMe = () => {
   return (
     <>
-      <main className=" ">
+      <main id="aboutme" className=" ">
         <div className=" p-4">
           <p className="text-indigo-700 text-md">
             I'm a self-motivated, team oriented, algorithmic thinker with a
