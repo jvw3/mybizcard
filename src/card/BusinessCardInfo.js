@@ -11,80 +11,60 @@ import { motion } from "framer-motion";
 import { SwiperContainer } from "./ScrollingContainer";
 
 export const BusinessCardInfo = () => {
-  const options = { threshold: 0.6 };
+  const options = { threshold: 0.38 };
   const { ref: skillsRef, inView: skillsVisible } = useInView(options);
   const { ref: aboutRef, inView: aboutMeVisible } = useInView(options);
   const { ref: experienceRef, inView: experienceVisible } = useInView(options);
 
-  function openEmail() {
-    window.open(`mailto:jvw.226@gmail.com`);
-  }
-  function openGithub() {
-    window.open(`https://github.com/jvw3`);
+  function scrollToElement(id) {
+    var elmnt = document.getElementById(id);
+    elmnt.scrollIntoView({ behavior: "smooth", block: "start"});
   }
   return (
     <>
-      <main className="w-full">
+      <main className="w-full h-full">
         <div className="flex justify-evenly border-b-gray-300 border-2 rounded-tl-xl rounded-tr-xl">
           <div
-            onClick={openEmail}
-            className="mt-5 text-white p-3 text-lg"
+            onClick={() => {
+              scrollToElement("aboutme");
+            }}
+            className={`mt-1.5 text-indigo-700 p-2 text-lg   ${
+              aboutMeVisible
+                ? "border-b-4 border-indigo-700"
+                : "border-b-4 border-white"
+            }`}
           >
-              {aboutMeVisible ? (
-              <div className={`absolute top-[325px] border-2 w-[115px] border-indigo-700 transition-all ease-in-out duration-200`}></div>
-              ) : (
-                ""
-              )}
-              {skillsVisible ? (
-              <div className={`absolute top-[325px] border-2 w-[90px] left-[140px] border-indigo-700 transition-all ease-in-out duration-200`}></div>
-              ) : (
-                ""
-              )}
-              {experienceVisible ? (
-              <div className={`absolute top-[325px] border-2 w-[100px] left-[250px] border-indigo-700 transition-all ease-in-out duration-200`}></div>
-              ) : (
-                ""
-              )}
             <div className={`flex space-x-2 text-indigo-700 `}>
               <div>About Me</div>
-              <IconMail />
             </div>
           </div>
           <div
-            initial={{ scale: 0, rotation: -180 }}
-            animate={{ rotate: 0, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 10,
-              delay: 0.2,
-            }}
-            whileTap={{ scale: 0.8 }}
-            className="mt-5 text-indigo-700 p-3 text-lg"
+            className={`mt-1.5 text-indigo-700 p-2 text-lg  ${
+              skillsVisible
+                ? "border-b-4 border-indigo-700"
+                : "border-b-4 border-white"
+            }`}
           >
-            <button onClick={openGithub}>
+            <button
+              onClick={() => {
+                scrollToElement("skills");
+              }}
+            >
               <div className="flex space-x-2">
                 <div>Skills</div>
-                <IconBrandGithub />
               </div>
             </button>
           </div>
           <div
-            initial={{ scale: 0, rotation: -180 }}
-            animate={{ rotate: 0, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 10,
-              delay: 0.2,
-            }}
-            className="mt-5 text-indigo-700 p-3 text-lg"
-            whileTap={{ scale: 0.8 }}
+            className={`mt-1.5 text-indigo-700 p-2 text-lg  ${
+              experienceVisible
+                ? "border-b-4 border-indigo-700"
+                : "border-b-4 border-white"
+            }`}
           >
             <button>
               <div className="flex space-x-2">
                 <div>Experience</div>
-                <IconExternalLink />
               </div>
             </button>
           </div>
