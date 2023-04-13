@@ -1,6 +1,5 @@
 import mylogo from "../images/jwlogo.svg";
 import { AboutMe } from "./AboutMe";
-import { CardInfo } from "./CardInfo";
 import { useState } from "react";
 import { BusinessCardInfo, Skills } from "./BusinessCardInfo";
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react";
@@ -12,8 +11,7 @@ export const MyCard = () => {
 
   return (
     <>
-      <main className=" w-screen h-90 bg-indigo-900 font-roboto">
-        <div className="flex-col">
+      <main className="h-85 w-screen bg-indigo-900 font-roboto overflow-y-hidden">
           <div className="relative flex items-start justify-center h-30">
             <div className=" w-full h-full flex-col ">
               <div className="bg-headshotBackground bg-cover h-full bg-[center_top_-6rem] ">
@@ -52,10 +50,9 @@ export const MyCard = () => {
               </motion.div>
             </div>
           </div>
-          <div className="text-center  bg-white rounded-tr-2xl rounded-tl-2xl h-60">
+          <div className="text-center bg-white rounded-tr-2xl rounded-tl-2xl h-fit">
             <BusinessCardInfo />
           </div>
-        </div>
       </main>
     </>
   );
