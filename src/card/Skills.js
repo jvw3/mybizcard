@@ -5,7 +5,7 @@ export const Skills = () => {
 
   return (
     <>
-      <div className="inline-flex overflow-x-hidden " >
+      <div id="skills" className="inline-flex overflow-x-hidden " >
         <div className="space-y-5 flex-col mt-4">
           <div className="flex flex-wrap w-80 justify-center  space-x-1 ">
             <div className="flex-col">
